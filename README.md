@@ -68,6 +68,22 @@ R.setup();
 
 ```
 
+## New
+
+Added `getSlots(array)`
+
+```javascript
+/**
+* @param {Array} array 
+*/
+genSlots(array = []) {
+    var str;
+    if (!Array.isArray(array)) return undefined
+    str = array.length ? array.fill("?").join() : ''
+    return str
+}
+```
+
 This **automatically generates** the tables and columns... on-the-fly. It infers relations based on naming conventions.
 
 # Unit Test
