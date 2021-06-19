@@ -1,6 +1,6 @@
 {
     "name": "redbean-sql",
-    "version": "0.0.22",
+    "version": "0.0.23",
     "description": "redbean-sql is last version of `redbean-node` with bug fixes",
     "main": "dist/redbean-node.js",
     "types": "dist/redbean-node.d.ts",

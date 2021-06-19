@@ -826,9 +826,9 @@ class RedBeanNode {
      * @param {Array} array 
      */
     genSlots(array = []) {
-        var str;
         if (!Array.isArray(array)) return undefined
-        str = array.length ? array.fill("?").join() : ''
+        var str = array.slice();
+        str.length ? str.fill("?").join() : ''
         return str
     }
 
