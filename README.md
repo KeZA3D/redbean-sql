@@ -66,6 +66,7 @@ R.setup();
   await R.close();
 })();
 ```
+This **automatically generates** the tables and columns... on-the-fly. It infers relations based on naming conventions.
 
 ## New
 
@@ -83,7 +84,6 @@ genSlots(array = []) {
 }
 ```
 
-This **automatically generates** the tables and columns... on-the-fly. It infers relations based on naming conventions.
 
 # Unit Test
 
