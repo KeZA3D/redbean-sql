@@ -29,7 +29,7 @@ function magicMethods(clazz) {
         if (set) {
             instanceHandler.set = (target, name, value, receiver) => {
                 if (name in target) {
-                    Reflect.set(target, name, value, receiver);
+                    return Reflect.set(target, name, value, receiver);
                 }
                 else {
                     target.__set.call(target, name, value, receiver);

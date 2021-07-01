@@ -26,17 +26,6 @@ https://www.npmjs.com/package/redbean-node
 npm install redbean-node --save
 ```
 
-## Read More
-
-Docs:
-http://redbean-node.whatsticker.online
-
-## Playground
-
-Try RedBeanNode in browser!
-
-https://runkit.com/louislam/redbeannode-playground
-
 ## Code Example
 
 This is how you do CRUD in RedBeanNode:
@@ -84,11 +73,21 @@ genSlots(array = []) {
 }
 ```
 
+## Fixed
 
-# Unit Test
+Fixed relations
 
-Please build the project before run the test.
+```javascript
+let car = db.R.dispense('car');
+    car.brand = 'Brand';
+    car.model = 'Model';
+    car.year = 'Model';
+    car.chat_keyword= 'KWD';
+    try {await db.R.store(car);}catch (e) {console.log(e);}
 
-# Additional
-
-Icons made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from https://www.flaticon.com
+    console.log("Creating usercar model");
+    let usercar = db.R.dispense('usercar');
+    usercar.added_date = db.R.isoDate();
+    usercar.car = car; // Now this store correctly without any errors
+    try {await db.R.store(usercar);}catch (e) {console.log(e);}
+```
