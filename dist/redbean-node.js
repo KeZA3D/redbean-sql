@@ -825,11 +825,10 @@ class RedBeanNode {
     /**
      * @param {Array} array 
      */
-    genSlots(array = []) {
+     genSlots(array = []) {
         if (!Array.isArray(array)) return undefined
         var str = array.slice();
-        str.length ? str.fill("?").join() : ''
-        return str
+        return str.length ? str.fill("?").join() : ''
     }
 
     get modelList() {
