@@ -23,7 +23,7 @@ https://www.npmjs.com/package/redbean-node
 ## Installation
 
 ```shell script
-npm install redbean-node --save
+npm install redbean-sql
 ```
 
 ## Code Example
