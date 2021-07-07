@@ -3,7 +3,8 @@
 **(Early Development)**
 
 RedBeanNode is an easy to use **ORM** tool for Node.js, strongly inspired by RedBeanPHP.
-!!!WARNING!!! redbean-sql is last (0.0.20) version of `redbean-node` with bug fixes
+
+!!!WARNING!!! `redbean-sql` is last (0.0.20) version of `redbean-node` with bug fixes
 
 Original:
 https://www.npmjs.com/package/redbean-node
@@ -31,7 +32,7 @@ npm install redbean-sql
 This is how you do CRUD in RedBeanNode:
 
 ```javascript
-const { R } = require("redbean-node");
+const { R } = require("redbean-sql");
 
 // Setup connection
 R.setup();
@@ -55,6 +56,7 @@ R.setup();
   await R.close();
 })();
 ```
+
 This **automatically generates** the tables and columns... on-the-fly. It infers relations based on naming conventions.
 
 ## New
