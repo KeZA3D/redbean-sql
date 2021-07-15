@@ -822,10 +822,7 @@ class RedBeanNode {
             }
         }
     }
-    /**
-     * @param {Array} array 
-     */
-     genSlots(array = []) {
+    genSlots(array = []) {
         if (!Array.isArray(array)) return undefined
         var str = array.slice();
         return str.length ? str.fill("?").join() : ''

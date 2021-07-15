@@ -55,6 +55,7 @@ export declare class RedBeanNode {
     getCol(sql: string, data?: readonly RawBinding[]): Promise<any[]>;
     getCell(sql: string, data?: RawBinding[], autoLimit?: boolean): Promise<any>;
     getAssoc(sql: string, data?: string[]): Promise<{}>;
+    genSlots(array: array): string;
     count(type: string, clause?: string, data?: RawBinding[], autoLimit?: boolean): Promise<any>;
     inspect(type: any): any;
     begin(): Promise<RedBeanNode>;
